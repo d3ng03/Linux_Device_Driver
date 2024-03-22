@@ -67,7 +67,7 @@ static int chardev_init(void)
         return -1;
     }
  
-    chardev_class = class_create(THIS_MODULE, "chardev");
+    chardev_class = class_create("chardev");
     if (IS_ERR(chardev_class)) {
         printk(KERN_ERR  "class_create\n");
         cdev_del(&chardev_cdev);
